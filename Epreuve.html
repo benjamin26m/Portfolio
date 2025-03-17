@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Style/stylesE.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <title>Documents pour les Épreuves - Portfolio</title>
+</head>
+<body>
+
+  <!-- Emplacement de la navbar -->
+  <div id="navbar-container"></div>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Documents pour les Épreuves</h1>
+      <p>Retrouvez ici tous les documents nécessaires pour les épreuves de mon BTS.</p>
+    </div>
+  </header>
+
+  <!-- Section Title moved here -->
+  <div class="section-title" style="text-align: center; margin: 40px 0;">
+    <h2 style="font-size: 2rem; font-weight: bold;">Documents 📄</h2>
+    <p style="font-size: 1.2rem; color: #555; margin-bottom: 10px;"><i>Les documents officiels et supports pour les épreuves du BTS SIO.</i></p>
+    <hr style="width: 50px; height: 2px; background-color: #555; border: none; margin: 10px auto;">
+  </div>
+
+  <!-- Section Documents déplacée ici -->
+  <section class="documents-section">
+    <div class="container">
+      <div class="documents-title">
+        <h2>Documents 📄</h2>
+        <p><i>Les documents officiels et supports pour les épreuves du BTS SIO.</i></p>
+      </div>
+
+      <!-- Table for Épreuve E5 -->
+      <div class="documents-category">
+        <h3>📂 Épreuve E5</h3>
+        <table class="documents-table">
+          <thead>
+            <tr>
+              <th>Nom du Document</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rapport de Stage 2024</td>
+              <td>Rapport détaillé de mon stage effectué en 2024.</td>
+              <td>
+                <a href="doc/Rapport_Stage_2024.pdf" download="Rapport_Stage_2024">
+                  <button type="button" class="download-button">Télécharger</button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Rapport de Stage 2025</td>
+              <td>Rapport détaillé de mon stage effectué en 2025.</td>
+              <td>
+                <a href="doc/Rapport_Stage_2025.pdf" download="Rapport_Stage_2025">
+                  <button type="button" class="download-button">Télécharger</button>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table for Épreuve E6 -->
+      <div class="documents-category">
+        <h3>📜 Épreuve E6</h3>
+        <table class="documents-table">
+          <thead>
+            <tr>
+              <th>Nom du Document</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fiche Épreuve E4</td>
+              <td>Fiche descriptive pour l'épreuve E4.</td>
+              <td>
+                <a href="doc/Fiche_E4.pdf" download="Fiche_E4">
+                  <button type="button" class="download-button">Télécharger</button>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Fiche Épreuve E6</td>
+              <td>Fiche descriptive pour l'épreuve E6.</td>
+              <td>
+                <a href="doc/Fiche_E6.pdf" download="Fiche_E6">
+                  <button type="button" class="download-button">Télécharger</button>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emplacement du footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Fonction pour charger un fichier HTML
+    function loadHTML(id, file, callback) {
+      fetch(file)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+          if (callback) callback(); // Exécute le callback après le chargement
+        })
+        .catch(error => console.error(`Erreur de chargement ${file}:`, error));
+    }
+
+    // Charger les fichiers HTML
+    loadHTML("navbar-container", "navbar.html");
+    loadHTML("footer-container", "footer.html");
+  </script>
+
+</body>
+</html>
