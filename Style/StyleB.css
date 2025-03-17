@@ -1,0 +1,153 @@
+/* Reset de base pour les éléments de la page BTS */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #957DAD, #5E8C9A);
+    color: #2C3E50;
+    min-height: 100vh; /* Permet de couvrir tout l'écran */
+}
+
+/* Styles pour l'en-tête de la section BTS */
+.intro-bts {
+    text-align: center;
+    padding: 50px;
+    color: rgb(8, 8, 8);
+}
+
+/* Styles pour les détails de la section BTS */
+.details-bts {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 50px auto; /* Augmente l'espace */
+    max-width: 80%; /* Limiter la largeur pour la lisibilité */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+/* Styles pour les options SISR et SLAM */
+.options-bts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espacement entre les éléments */
+    padding: 20px;
+}
+
+/* Styles pour les cartes d'options individuelles */
+.option-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: calc(50% - 20px); /* Ajustement pour l'espacement */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Styles pour les boutons */
+.en-savoir-plus {
+    display: inline-block;
+    background-color: #5E8C9A;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.en-savoir-plus:hover {
+    background-color: #C32F3A;
+    transform: scale(1.05);
+}
+
+/* ✅ Amélioration : Animation au scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ✅ Correction du fond et structure de `.hero-section` */
+.hero-section {
+  
+    color: #ffffff;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    width: 100%; /* Assure que ça prend toute la largeur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ✅ Fix des titres */
+.hero-content h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+/* ✅ Ajustements responsifs */
+@media (max-width: 768px) {
+    .options-bts {
+        flex-direction: column;
+    }
+
+    .option-card {
+        flex-basis: 100%;
+    }
+
+    .details-bts {
+        margin: 20px;
+        max-width: 95%;
+    }
+
+    .intro-bts {
+        padding: 30px;
+    }
+
+    .en-savoir-plus {
+        padding: 8px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+}
+
+/* ✅ Fix des logos BTS */
+.bts-sio-logo {
+    background-color: #0055a5; /* Blue background */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Main section to ensure consistent background */
+main {
+    background: inherit; /* Inherit the background from the body */
+    padding: 20px;
+    box-sizing: border-box;
+}

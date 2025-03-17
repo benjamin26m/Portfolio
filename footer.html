@@ -1,0 +1,139 @@
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>MANOLIOS Benjamin</p>
+      <p>© 2025. All rights reserved.</p>
+    </div>
+    <div class="footer-center">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="BTS.html">BTS SIO</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="veille-techno.html">Veille Techno</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h3>Informations</h3>
+      <ul>
+        <li><a href="#">Mentions Légales</a></li>
+        <li><a href="#">Conditions d'utilisation</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <div style="display: flex; gap: 10px;">
+        <a href="mailto:benjamin26.manolios@gmail.com" target="_blank" style="display: inline-block; background: #f1f1f1; border-radius: 50%; padding: 10px;">
+          <i class="fas fa-envelope" style="font-size: 24px; color: #D44638;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/benjamin-manolios-41a7b7262/" target="_blank" style="display: inline-block; background: #f1f1f1; border-radius: 50%; padding: 10px;">
+          <i class="fab fa-linkedin" style="font-size: 24px; color: #0077b5;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #333; /* Match navbar background color */
+    color: white;
+    padding: 20px 0;
+    overflow: hidden; /* Ajouté pour contenir des enfants flottants */
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Assurez-vous que le contenu peut envelopper si nécessaire */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right,
+  .footer-contact {
+    margin: 10px;
+    flex-basis: 22%; /* Réglé sur 22% pour tenir compte de la marge */
+    min-width: 160px; /* Minimum width to prevent elements from becoming too narrow */
+  }
+
+  /* Clearfix pour le contenu du pied de page */
+  .footer-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .footer-center ul,
+  .footer-right ul,
+  .footer-contact ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer-center ul li,
+  .footer-right ul li,
+  .footer-contact ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer-center h3,
+  .footer-right h3,
+  .footer-contact h3 {
+    margin-bottom: 10px;
+  }
+
+  .footer-contact h3,
+  .footer-contact p,
+  .footer-contact a {
+    margin-left: 0; /* Ajustez si nécessaire pour l'alignement */
+  }
+
+  /* Ajout pour la cohérence de la couleur des liens dans le pied de page */
+  .footer-center a,
+  .footer-right a,
+  .footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  /* Ajout pour l'effet de survol des liens dans le pied de page */
+  .footer-center a:hover,
+  .footer-right a:hover,
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+
+  /* Media queries pour une conception réactive */
+  @media (max-width: 1024px) {
+    /* Quand l'écran est <= 1024px */
+    .footer-left,
+    .footer-center,
+    .footer-right,
+    .footer-contact {
+      flex-basis: 48%; /* Deux colonnes */
+      margin: 5px; /* Ajustez la marge comme vous le souhaitez */
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Quand l'écran est <= 768px */
+    .footer-left,
+    .footer-center,
+    .footer-right,
+    .footer-contact {
+      flex-basis: 100%; /* Chaque élément prend toute la largeur */
+      text-align: center; /* Texte centré pour les petits écrans */
+    }
+
+    .footer-contact h3,
+    .footer-contact p,
+    .footer-contact a {
+      margin-left: 0; /* Enlève la marge pour les éléments centrés */
+    }
+  }
+</style>

@@ -1,0 +1,119 @@
+/* Reset de base pour les éléments de la page BTS */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ecf0f1;
+  color: #333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes the full viewport height */
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and take available space */
+}
+
+
+.content-container {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 50px; /* Add some space on the top */
+}
+
+.image {
+  width: 40%; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add space between image and text */
+}
+@media (min-width: 768px) {
+  .slam-image {
+    width: 25%;
+    height: auto;
+    margin-right: 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    margin-top: 20px; /* Adjust top margin */
+  }
+
+  .image, .slam-image {
+    width: 100%; /* Full width for images */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+
+  .text-content {
+    width: 100%; /* Full width for text content */
+  }
+
+  .main-title {
+    font-size: 2em; /* Adjust title size */
+  }
+}
+
+.text-content {
+  width: 50%; /* Set text content width */
+  text-align: left; /* Align text to the left */
+}
+
+.text-content h1 {
+  color: #cc0000; /* Color for the heading */
+  margin-bottom: 0.5em; /* Space below the heading */
+}
+
+.text-content h2 {
+  color: #333; /* Color for the subheading */
+  font-weight: normal; /* Normal font weight for the subheading */
+}
+
+.text-content p {
+  color: #333; /* Color for the paragraph */
+}
+
+
+/* Reste de votre CSS ici */
+
+.main-title {
+  text-align: center; /* Centrer le titre horizontalement */
+  font-size: 2.5em; /* Augmenter la taille du titre */
+  margin-top: 0; /* Enlever la marge du haut pour qu'il soit tout en haut */
+  padding: 20px 0; /* Ajouter un peu de padding en haut et en bas */
+  color: #000; /* Changer la couleur du texte pour contraster avec le fond */
+}
+
+/* Assurez-vous que la classe .main-title n'entre pas en conflit avec d'autres classes dans votre CSS. */
+
+
+/* Reste de votre CSS ... */
+
+.back-to-bts {
+  margin-top: 20px; /* Ajoute un peu d'espace au-dessus du bouton */
+}
+
+.back-button {
+  padding: 10px 20px; /* Ajoute du padding à l'intérieur du bouton */
+  background-color: #333; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  text-decoration: none; /* Enlève le soulignement des liens */
+  border-radius: 5px; /* Adoucit les coins du bouton */
+  transition: background-color 0.3s; /* Transition douce pour le survol */
+}
+
+.back-button:hover {
+  background-color: #555; /* Couleur de fond du bouton au survol */
+}
+.bts-sio-logo {
+  background-color: #0055a5; /* Blue background */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}

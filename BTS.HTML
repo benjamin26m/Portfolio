@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Style/StyleB.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>BTS SIO - Portfolio de MANOLIOS Benjamin</title>
+</head>
+<body>
+  <main>
+  <div id="navbar-container"></div>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>BTS SIO</h1>
+      <p>Brevet de Technicien Supérieur - Services Informatiques aux Organisations</p>
+    </div>
+  </header>
+
+
+    <section class="details-bts fade-in">
+      <p>Le BTS Services Informatiques aux Organisations (BTS SIO) représente une évolution majeure par rapport à l'ancien BTS Informatique de Gestion (IG), reflet d'une mise à jour complète du programme en septembre 2020. Ce cursus, reconnu par l'État, se déroule sur deux ans après l'obtention du baccalauréat et mène à un diplôme de niveau BAC+2. Il offre deux parcours spécialisés répondant aux besoins croissants du secteur de l'IT : l'Option SISR, concentrée sur les Solutions d’Infrastructures, Systèmes et Réseaux, et l'Option SLAM, dédiée aux Solutions Logicielles et Applications Métiers.</p>
+    </section>
+
+    <section class="options-bts fade-in">
+      <article class="option-card sisr">
+        <h2>Option A : SISR</h2>
+        <p>La spécialisation SISR (Solutions d’Infrastructures, Systèmes et Réseaux) du BTS SIO vise à former des futurs Administrateurs Systèmes et Réseaux...</p>
+        <a href="sisr-details.html" class="en-savoir-plus">En savoir plus</a>
+      </article>
+
+      <article class="option-card slam">
+        <h2>Option B : SLAM</h2>
+        <p>La spécialisation SLAM (Solutions Logicielles et Applications Métiers) du BTS SIO vise à former des futurs développeurs...</p>
+        <a href="slam-details.html" class="en-savoir-plus">En savoir plus</a>
+      </article>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Fonction pour charger un fichier HTML
+    function loadHTML(id, file, callback) {
+      fetch(file)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+          console.log(`✅ ${file} chargé !`);
+          if (callback) callback(); // Exécute le callback après le chargement
+        })
+        .catch(error => console.error(`Erreur de chargement ${file}:`, error));
+    }
+
+    // Charger les fichiers HTML
+    loadHTML("navbar-container", "navbar.html", () => {
+      console.log("Navbar loaded");
+      updateDateTime(); // Lancer l'horloge une fois la navbar chargée
+    });
+    loadHTML("footer-container", "footer.html");
+
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const date = now.toLocaleDateString('fr-FR', options);
+      const time = now.toLocaleTimeString('fr-FR');
+      document.getElementById('date-time').innerHTML = `${date} <br> ${time}`;
+      setInterval(() => {
+        const now = new Date();
+        const date = now.toLocaleDateString('fr-FR', options);
+        const time = now.toLocaleTimeString('fr-FR');
+        document.getElementById('date-time').innerHTML = `${date} <br> ${time}`;
+      }, 1000);
+    }
+
+    // Fonction pour gérer l'animation au scroll
+    function handleScrollAnimation() {
+      const fadeInElements = document.querySelectorAll('.fade-in');
+      fadeInElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          element.classList.add('show');
+        }
+      });
+    }
+
+    // Ajouter un écouteur d'événement pour le scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+
+    // Exécuter l'animation au chargement de la page
+    handleScrollAnimation();
+  </script>
+
+</body>
+</html>

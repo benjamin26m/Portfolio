@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Style/styleDetails.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <title>Spécialisation SLAM</title>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <header>
+    <h1 class="main-title">Spécialisation SLAM</h1>
+    <!-- Reste du contenu de l'entête ici -->
+  </header>
+  <main>
+    <div class="content-container">
+      <img src="img/code.png" alt="Description de l'image" class="slam-image">
+      <div class="text-content">
+        <h1>Option B : SLAM</h1>
+        <h2>(Solutions Logicielles et Applications Métiers)</h2>
+        <p>La spécialisation SLAM au sein du BTS SIO est conçue pour équiper les étudiants des compétences nécessaires à devenir des développeurs innovants, avec un accent sur la création et l'amélioration d'applications. Un élément clé de cette formation est la cybersécurité, garantissant que la sécurité est intégrée dès le début du processus de développement.</p>
+        <p>Les diplômés de cette spécialisation jouent un rôle crucial dans la production et la prestation de services informatiques, en développant, adaptant ou en maintenant des solutions logicielles adaptées aux besoins.</p>
+        <div class="back-to-bts">
+          <a href="BTS.html" class="back-button">Retour au BTS SIO</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Fonction pour charger un fichier HTML
+    function loadHTML(id, file, callback) {
+      fetch(file)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+          if (callback) callback(); // Exécute le callback après le chargement
+        })
+        .catch(error => console.error(`Erreur de chargement ${file}:`, error));
+    }
+
+    // Charger les fichiers HTML
+    loadHTML("navbar-container", "navbar.html", updateDateTime);
+    loadHTML("footer-container", "footer.html");
+
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const date = now.toLocaleDateString('fr-FR', options);
+      const time = now.toLocaleTimeString('fr-FR');
+      document.getElementById('date-time').innerHTML = `${date} <br> ${time}`;
+      setInterval(() => {
+        const now = new Date();
+        const date = now.toLocaleDateString('fr-FR', options);
+        const time = now.toLocaleTimeString('fr-FR');
+        document.getElementById('date-time').innerHTML = `${date} <br> ${time}`;
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

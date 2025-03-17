@@ -1,0 +1,234 @@
+/* Réinitialisation du CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styles de base pour le corps et le html */
+body, html {
+width: 100%;
+height: 100%;
+font-family: 'Arial', sans-serif;
+}
+
+
+
+/* Section héros */
+.hero-section {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+text-align: center;
+background: linear-gradient(to right, #957DAD, #5E8C9A);
+}
+
+.hero-section h1 {
+font-size: 3em;
+margin-bottom: 0.5em;
+}
+
+.hero-section h2 {
+font-size: 1.5em;
+}
+
+/* Conteneur pour les sections */
+.container, .projects-container {
+display: flex;
+justify-content: space-between;
+padding: 15px;
+margin-top: 20px;
+}
+
+.section {
+width: calc(50% - 10px);
+display: flex;
+flex-direction: column;
+align-items: center; /* Centralise le contenu des sections */
+}
+
+/* Styles des titres de sections */
+.section-title, .TITRE h1 {
+font-size: 24px; /* Taille uniforme pour les titres */
+margin-bottom: 20px;
+text-align: center;
+}
+
+/* Styles des cartes (plus grandes sans espacer les boutons) */
+.card {
+  background: #d4cfcf;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; /* Largeur ajustable */
+  max-width: 600px; /* Largeur plus grande */
+  height: auto; /* Ajuste automatiquement la hauteur */
+  overflow: hidden;
+}
+
+/* Images plus grandes */
+.card img {
+  width: 100%;
+  height: 250px; /* Hauteur uniforme pour toutes les images */
+  object-fit: cover; /* Évite les déformations */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Titre centré */
+.card .TITRE {
+  text-align: center;
+  margin-top: 10px;
+  flex-grow: 1;
+}
+
+/* Le bouton reste en bas */
+.card button {
+  margin-top: auto; /* Garde le bouton en bas sans créer d’espace supplémentaire */
+  align-self: center;
+  padding: 12px 24px; /* Légèrement plus grand pour l’esthétique */
+}
+
+
+
+
+/* Styles du modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+cursor: pointer;
+}
+
+/* Boutons de téléchargement */
+.download-link {
+text-decoration: none;
+}
+
+.download-button {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover, .download-button:focus {
+  background: linear-gradient(45deg, #0056b3, #003f7f);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Styles améliorés des boutons "En savoir plus" */
+button[id^="myBtn"] {
+  background: linear-gradient(135deg, #6A5ACD, #4682B4);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de survol */
+button[id^="myBtn"]:hover {
+  background: linear-gradient(135deg, #5A4FCF, #3B719F);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Effet de clic */
+button[id^="myBtn"]:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet d'animation subtile */
+button[id^="myBtn"]::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Animation au survol */
+button[id^="myBtn"]:hover::before {
+  opacity: 0.5;
+}
+
+
+/* Médias queries pour la réactivité */
+@media (max-width: 768px) {
+.container, .projects-container {
+  flex-direction: column;
+}
+
+.card {
+  width: 90%;
+}
+
+.section {
+  width: 100%;
+}
+
+
+}
+.bts-sio-logo {
+  background-color: #0055a5; /* Blue background */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}

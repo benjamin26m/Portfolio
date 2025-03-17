@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique</title>
+    <link rel="stylesheet" href="Style/StyleV.css" onload="console.log('CSS chargé avec succès')" onerror="console.error('Erreur de chargement du CSS')">
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Veille Technologique</h1>
+      <h2>Sécurité des systèmes et cyberattaques</h2>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+      <div class="text-container">
+        <div class="info-box">
+          <h2>Objectif de la Veille</h2>
+          <p>L'objectif de cette veille est de montrer les vulnérabilités des systèmes et les nouvelles méthodes de cyberattaques utilisées par les pirates informatiques, ainsi que des efforts déployés pour renforcer la sécurité et la résilience des systèmes informatiques.</p>
+          <h2>Outils Utilisés</h2>
+          <p>Afin de réaliser cette veille, je me suis principalement basé sur des flux RSS via Feedly ainsi que mon fil Twitter et LinkedIn.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="article-section">
+    <h2>Articles</h2>
+    <div class="article-container">
+      <a href="https://www.it-connect.fr/15-000-firewalls-fortigate-menaces-fuite-massive-config-complete-et-identifiants/" class="article-card" target="_blank">
+        <img src="img/Un-pirate-devoile-les-mots-de-passe-de-15-000-firewalls-Fortinet.png" alt="FortiGate Firewall">
+        <div class="article-info">
+          <h3>Vulnérabilité du pare-feu FortiGate</h3>
+          <p>15 000 firewalls FortiGate menacés par une fuite massive de configuration complète et d'identifiants.</p>
+          <p class="article-date">Publié le : 16/01/2025</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script>
+    function loadHTML(id, file, callback) {
+      console.log(`Chargement du fichier: ${file}`);
+      fetch(file)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Erreur HTTP! statut: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+          console.log(`Fichier chargé avec succès: ${file}`);
+          if (callback) callback();
+        })
+        .catch(error => console.error(`Erreur de chargement ${file}:`, error));
+    }
+
+    // Charger les fichiers HTML
+    loadHTML("navbar-container", "navbar.html");
+    loadHTML("footer-container", "footer.html");
+  </script>
+</body>
+</html>

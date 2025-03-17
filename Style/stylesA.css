@@ -1,0 +1,550 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #957DAD, #5E8C9A);
+  font-size: 1.10em; /* Increase base font size */
+}
+
+
+.hero-section {
+  background: linear-gradient(to right, #957DAD, #5E8C9A);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+.hero-content h2, .hero-content p {
+  margin-top: 0.2em;
+}
+
+
+.cv-button {
+  background-color: #5E8C9A;
+}
+
+.cv-button:hover {
+  background-color: #4b6f7b;
+}
+.cv-button, .certification-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.certification-button {
+  background-color: #0055a5; /* PIX blue */
+}
+
+.certification-button:hover {
+  background-color: #003973;
+}
+
+.certification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+
+}
+
+.certification-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  height: 300px; /* Add fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure even spacing */
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+}
+
+.certification-logo {
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+.certification {
+  margin-bottom: 80px; /* Add space below the Certification section */
+  height: 100vh;
+}
+
+.certification h1 {
+  margin-top: 40px !important; /* Adjust the top margin to move the title down */
+}
+.certification-title-container {
+  text-align: center;
+  margin-bottom: 20px; /* Revert to original margin-bottom */
+}
+
+.certification-title {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+  margin-top: 10px !important; /* Adjust the top margin to move the title down */
+}
+
+/* Ajoute une ligne décorative sous le titre */
+.certification-title::after {
+  content: "";
+  display: block;
+  width: 60px; /* Longueur de la ligne */
+  height: 4px; /* Épaisseur de la ligne */
+  background-color: #0055a5; /* Même couleur que les boutons */
+  margin: 8px auto 0; /* Centre la ligne */
+  border-radius: 2px;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Or the max width you prefer */
+  margin: 0 auto; /* This centers the container */
+  padding: 80px; /* Adjust the padding as needed */
+}
+
+/* New styles for parscours scolaire section */
+.parcours-section {
+  background-color: #ffffff; /* Add white background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 80px; /* Add space above the Parcours section */
+}
+
+
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #000;
+}
+
+.presentation-image,
+.presentation-text {
+  flex: 1; /* Each child takes up equal space */
+}
+
+.presentation-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.presentation-text {
+  text-align: center; /* Center the text inside the text div */
+}
+
+.presentation-text h2 {
+  margin-bottom: 0.5em; /* Adjust as needed */
+}
+
+.presentation-text p {
+  margin-bottom: 1em; /* Adjust as needed */
+}
+
+.cv-button {
+  /* Styling for your button */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5E8C9A; /* Or any color you prefer */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #4b6f7b; /* Darker shade for hover effect */
+}
+
+.HRnormal {
+  border: 0; /* Removes the default border */
+  height: 1px; /* Sets the height of the line */
+  background-color: #333; /* Sets the color of the line */
+  margin-top: 20px; /* Sets the top margin */
+  margin-bottom: 20px; /* Sets the bottom margin */
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #e9ecef;
+  left: 18px;
+  margin: 0;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #6c757d;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+.timeline-content {
+  padding-left: 60px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h2 {
+  margin-top: 0px;
+  font-size: 1.5em;
+  color: #495057;
+}
+
+.timeline-content p {
+  margin-bottom: 0;
+  color: #495057;
+}
+
+.timeline-content .date {
+  display: block;
+  margin-top: 10px;
+  color: #6c757d;
+  font-size: 0.85em;
+}
+
+.timeline-content.right {
+  padding-left: 60px;
+}
+
+.timeline-content.left {
+  padding-right: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .timeline-content.right,
+  .timeline-content.left {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  max-width: 900px; /* Adjust as necessary */
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Width of the central line */
+  background: #e9ecef; /* Color of the central line */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 45%; /* Adjust the width as necessary */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* For odd items */
+.timeline-item:nth-of-type(odd) {
+  left: 0;
+}
+
+/* For even items */
+.timeline-item:nth-of-type(even) {
+  left: 55%; /* Adjust the position as necessary */
+}
+
+/* Timeline icon */
+.timeline-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  background: #6c757d; /* Icon background color */
+  color: #fff; /* Icon text color */
+  top: 15px;
+}
+
+/* Position the icon correctly */
+.timeline-item:nth-of-type(odd) .timeline-icon {
+  right: -15px;
+}
+
+.timeline-item:nth-of-type(even) .timeline-icon {
+  left: -15px;
+}
+
+/* Timeline content box */
+.timeline-content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative;
+  z-index: 1;
+}
+
+/* Add arrows to content boxes */
+.timeline-content:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* For odd items */
+.timeline-item:nth-of-type(odd) .timeline-content:after {
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+/* For even items */
+.timeline-item:nth-of-type(even) .timeline-content:after {
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .timeline-item {
+    width: 90%;
+    left: 0 !important; /* Override previous styles */
+  }
+
+  .timeline-item:nth-of-type(even) .timeline-icon,
+  .timeline-item:nth-of-type(odd) .timeline-icon {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+  }
+
+  .timeline-item .timeline-content:after {
+    content: none;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  height: 100vh; /* La hauteur de la fenêtre pour centrer toute la section verticalement */
+}
+
+.text-container {
+  text-align: left; /* Aligner le texte à gauche */
+  max-width: 50%; /* Vous pouvez ajuster cette valeur en fonction de la largeur désirée pour votre texte */
+}
+
+.horizontal-line {
+  width: 50%; /* La largeur de votre ligne horizontale */
+}
+
+.profile-photo {
+  width: 200px; /* La taille de votre photo */
+  height: 250px; /* La taille de votre photo */
+  object-fit: cover; /* Pour garder le ratio de l'image sans la déformer */
+  border-radius: 50%; /* Si vous souhaitez une photo ronde */
+}
+
+.image-container {
+  padding-left: 20px; /* Ajoutez un peu d'espace entre le texte et l'image */
+}
+
+/* Vérifiez que le chemin de 'chemin/vers/votre/photo.jpg' est correct et pointe vers votre image */
+
+
+
+.presentation-image img {
+  border-radius: 15px; /* ajustez cette valeur pour obtenir l'arrondi désiré */
+  display: block; /* Assurez-vous que l'image est affichée comme un bloc pour éviter des marges indésirables */
+}
+
+/* Pour positionner le texte "BENJAMIN" en haut à droite */
+.header-title {
+  position: absolute; /* ou 'fixed' selon le comportement désiré */
+  top: 0;
+  right: 0;
+  font-size: 1.5em; /* ajustez la taille comme nécessaire */
+  margin: 10px; /* ajustez l'espacement comme nécessaire */
+  color: #FFFFFF; /* ou toute autre couleur selon votre design */
+}
+
+/* Pour remonter tout le contenu */
+.container {
+  position: relative; /* ou 'absolute' si vous voulez le positionner précisément */
+  top: -50px; /* ajustez cette valeur pour remonter le contenu */
+  /* autres styles nécessaires */
+}
+
+/* N'oubliez pas de rajouter la classe ou l'id correspondant à votre HTML */
+
+/* Si le contenu chevauche la barre de navigation, vous pouvez ajouter un padding-top au premier élément sous le <body> pour l'écarter du haut de la page */
+body > :first-child {
+  padding-top: 50px; /* ajustez cette valeur selon la hauteur de votre barre de navigation */
+}
+
+/* Bubble styles for parcours scolaire section */
+.resume-item {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #971f1f;
+  position: relative;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+.resume-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume-item h5 {
+  font-size: 16px;
+  background: #acb0b4;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.resume-item p {
+  margin: 5px 0;
+}
+
+.resume-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.resume-item a:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+
+.bts-sio-logo {
+  background-color: #0055a5; /* Blue background */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.download-button {
+  background-color: #333333; /* Gris foncé */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #666666; /* Gris plus clair au survol */
+  transform: translateY(-2px);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+

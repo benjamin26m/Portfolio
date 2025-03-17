@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Style/styleDetails.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <title>Spécialisation SISR</title>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <header>
+    <h1 class="main-title">Spécialisation SISR</h1>
+    <!-- Reste du contenu de l'entête ici -->
+  </header>
+  <main>
+    <div class="content-container">
+      <img src="img/serveur.png" alt="Image description" class="image">
+      <div class="text-content">
+        <h1>Option A : SISR</h1>
+        <h2>(Solutions d’Infrastructures, Systèmes et Réseaux)</h2>
+        <p>La finalité de la spécialisation SISR en BTS SIO est de préparer les étudiants à devenir des Administrateurs Systèmes et Réseaux compétents, dotés de solides compétences dans la conception, l'installation et la configuration d'équipements réseaux, ainsi que dans la gestion et la maintenance de systèmes informatiques complexes. Cette spécialisation met également un accent particulier sur la cybersécurité, élément crucial dans la protection des infrastructures numériques.</p>
+        <div class="back-to-bts">
+          <a href="BTS.html" class="back-button">Retour au BTS SIO</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+  <script>
+    // Fonction pour charger un fichier HTML
+    function loadHTML(id, file, callback) {
+      fetch(file)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+          if (callback) callback(); // Exécute le callback après le chargement
+        })
+        .catch(error => console.error(`Erreur de chargement ${file}:`, error));
+    }
+
+    // Charger les fichiers HTML
+    loadHTML("navbar-container", "navbar.html", updateDateTime);
+    loadHTML("footer-container", "footer.html");
+
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const date = now.toLocaleDateString('fr-FR', options);
+      const time = now.toLocaleTimeString('fr-FR');
+      document.getElementById('date-time').innerHTML = `${date} <br> ${time}`;
+      setInterval(() => {
+        const now = new Date();
+        const date = now.toLocaleDateString('fr-FR', options);
+        const time = now.toLocaleTimeString('fr-FR');
+        document.getElementById('date-time').innerHTML = `${date} <br> ${time}`;
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
