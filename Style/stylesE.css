@@ -135,7 +135,7 @@ a {
   color: #666;
 }
 
-.download-button {
+.download-button, .view-button {
   background-color: #3b82f6;
   color: white;
   border: none;
@@ -146,11 +146,11 @@ a {
   transition: background 0.2s ease-in-out;
 }
 
-.download-button:hover {
+.download-button:hover, .view-button:hover {
   background-color: #2563eb;
 }
 
-.download-button:active {
+.download-button:active, .view-button:active {
   transform: translateY(0);
 }
 
