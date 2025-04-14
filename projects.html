@@ -100,8 +100,16 @@
         </div>
         <button id="myBtn8">En savoir plus</button>
       </div>
+
+      <!-- Projet 4 -->
+      <div class="card">
+        <img src="img/SCRIPT.png" alt="Logo de l'entreprise 2">
+        <div class="TITRE">
+          <h1>Analyse de logs FortiGate & génération de règles firewall</h1>
+        </div>
+        <button id="myBtn9">En savoir plus</button>
+      </div>
     </div>
-  </div>
   </div>
 
   <!-- Modal pour le projet "Base de Données" -->
@@ -243,9 +251,10 @@
       </div>
     </div>
   </div>
-<!-- Modal pour le projet MFA DUO -->
-<div id="myModal8" class="modal">
-  <div class="modal-content">
+
+  <!-- Modal pour le projet MFA DUO -->
+  <div id="myModal8" class="modal">
+    <div class="modal-content">
       <span class="close" id="closeModal8">&times;</span>
       <h1>Projet : Mise en place du MFA avec DUO</h1>
       <p>Dans ce projet, j’ai mis en place une **authentification multi-facteurs (MFA) avec <strong>DUO Security</strong> pour renforcer la sécurité des accès sur <strong>Windows RDP</strong> et <strong>Bitwarden</strong>.</p>
@@ -272,8 +281,37 @@
               <button type="button" class="download-button">Télécharger le Rapport</button>
           </a>
       </div>
+    </div>
   </div>
-</div>
+
+  <!-- Modal pour le projet "Analyse de logs FortiGate" -->
+  <div id="myModal9" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal9">&times;</span>
+      <h1>Projet : Analyse de logs FortiGate & génération de règles firewall</h1>
+      <p>Ce projet consiste à exploiter un script Python pour analyser les <strong>logs réseau FortiGate</strong> issus d’une règle “ALL” afin de générer automatiquement des règles <strong>précises et optimisées</strong> pour le pare-feu.</p>
+      <h3>Objectifs :</h3>
+      <ul>
+        <li>Filtrer les flux autorisés à partir des logs (exclusion des flux “deny”).</li>
+        <li>Calculer des statistiques (moyenne, 75e percentile) pour détecter les flux pertinents.</li>
+        <li>Générer automatiquement des objets d’adresses, services et règles FortiGate.</li>
+        <li>Créer une règle spécifique pour les flux HTTP/HTTPS vers IP publiques.</li>
+      </ul>
+      <h3>Résultats :</h3>
+      <ul>
+        <li>Script fonctionnel capable de traiter et classifier les flux réseau.</li>
+        <li>Export automatique des règles <code>config firewall policy</code> prêtes à être appliquées.</li>
+        <li>Gain de temps et réduction des erreurs manuelles dans la configuration du pare-feu.</li>
+      </ul>
+      <h3>Conclusion :</h3>
+      <p>Ce projet m’a permis d’associer des compétences en <strong>programmation Python</strong>, <strong>analyse réseau</strong> et <strong>sécurité firewall</strong>. Le résultat est un outil automatisé pour transformer des logs bruts en une politique de sécurité réseau efficace.</p>
+      <div class="project-report-download">
+        <a href="doc/Rapport_de_script_python.pdf" download="Rapport_script_python" class="download-link">
+          <button type="button" class="download-button">Télécharger le Rapport</button>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <div id="footer-container"></div>
 
@@ -323,6 +361,7 @@
     var modal6 = document.getElementById("myModal6");
     var modal7 = document.getElementById("myModal7");
     var modal8 = document.getElementById("myModal8");
+    var modal9 = document.getElementById("myModal9");
     
 
     // Boutons pour ouvrir les modals
@@ -333,6 +372,7 @@
     var btn6 = document.getElementById("myBtn6");
     var btn7 = document.getElementById("myBtn7");
     var btn8 = document.getElementById("myBtn8");
+    var btn9 = document.getElementById("myBtn9");
   
 
     // Boutons pour fermer les modals
@@ -343,6 +383,7 @@
     var span6 = document.getElementById("closeModal6");
     var span7 = document.getElementById("closeModal7");
     var span8 = document.getElementById("closeModal8");
+    var span9 = document.getElementById("closeModal9");
 
 
     // Ouvrir les modals
@@ -366,6 +407,9 @@
     }
     btn8.onclick = function() {
       modal8.style.display = "block";
+    } 
+    btn9.onclick = function() {
+      modal9.style.display = "block";
     }
 
     // Fermer les modals
@@ -390,7 +434,9 @@
     span8.onclick = function() {
       modal8.style.display = "none";
     }
-
+    span9.onclick = function() {
+      modal9.style.display = "none";
+    }
 
     // Fermer les modals si l'utilisateur clique à l'extérieur d'eux
     window.onclick = function(event) {
@@ -408,6 +454,9 @@
         modal7.style.display = "none";
       } else if (event.target == modal8) {
         modal8.style.display = "none";
+      }
+      else if (event.target == modal9) {
+        modal9.style.display = "none";
       }
     }
   </script>
