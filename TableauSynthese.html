@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Style/stylesE.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/bm_favicon.ico">
+  <title>Tableau de Synthèse Épreuve E5</title>
+</head>
+<body>
+
+  <!-- Emplacement de la navbar -->
+  <div id="navbar-container"></div>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Tableau de Synthèse Épreuve E5</h1>
+      <p>Document récapitulatif pour l'épreuve E5.</p>
+    </div>
+  </header>
+
+  <section class="documents-section">
+    <div class="container">
+      <div class="documents-category">
+        <h3>Tableau de Synthèse Épreuve E5</h3>
+        <iframe 
+          src="doc/MANOLIOS_Benjamin_Epreuve_E5.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: 1px solid #ccc;">
+        </iframe>
+        <table class="documents-table">
+          <thead>
+            <tr>
+              <th>Nom du Document</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tableau de Synthèse Épreuve E5</td>
+              <td>Document récapitulatif pour l'épreuve E5.</td>
+              <td>
+                <a href="doc/MANOLIOS_Benjamin_Epreuve_E5.xlsx" target="_blank">
+                  <button type="button" class="download-button">Consulter</button>
+                </a>
+                <a href="doc/MANOLIOS_Benjamin_Epreuve_E5.xlsx" download="Tableau_Synthese_E5">
+                  <button type="button" class="download-button">Télécharger</button>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emplacement du footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Fonction pour charger un fichier HTML
+    function loadHTML(id, file, callback) {
+      fetch(file)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+          if (callback) callback(); // Exécute le callback après le chargement
+        })
+        .catch(error => console.error(`Erreur de chargement ${file}:`, error));
+    }
+
+    // Charger les fichiers HTML
+    loadHTML("navbar-container", "navbar.html");
+    loadHTML("footer-container", "footer.html");
+  </script>
+
+</body>
+</html>
