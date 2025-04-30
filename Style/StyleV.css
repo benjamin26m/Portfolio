@@ -94,8 +94,10 @@ body, html {
 .article-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    transition: opacity 0.3s;
+    object-fit: contain; /* Ensure the entire image is visible without being cropped */
+    display: block;
+    margin: auto; /* Center the image inside the card */
+    background-color: #000; /* Optional: Add a background color for better contrast */
 }
 
 .article-info {
