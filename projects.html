@@ -23,34 +23,25 @@
     <!-- Section "À l'école" -->
     <div class="section school">
       <h2>À l'école</h2>
-      
-      <!-- Projet 1 -->
+
+      <!-- Projet 5 -->
       <div class="card">
-        <img src="img/neptune.png" alt="cite de l'Hôtel Neptune">
+        <img src="img/OpenVPN.png" alt="Logo du projet 5">
         <div class="TITRE">
-          <h1 class="title">Site Web de l'Hôtel Neptune</h1>
+          <h1 class="title">OpenVPN(E6)</h1>
         </div>
-        <button id="myBtn1">En savoir plus</button>
+        <button id="myBtn5">En savoir plus</button>
       </div>
-      
-      <!-- Projet 2 -->
-      <div class="card"> 
-        <img src="img/travely.png" alt="Site de Travelly">
-        <div class="TITRE">
-          <h1 class="title">Travelly</h1>
-        </div>
-        <button id="myBtn2">En savoir plus</button>
-      </div>
-      
-      <!-- Projet 3 -->
+
+      <!-- Projet 6 -->
       <div class="card">
-        <img src="img/BDD.png" alt="Logo du projet 3">
+        <img src="img/PfSense.png" alt="Logo du projet 6">
         <div class="TITRE">
-          <h1 class="title">Base de Données</h1>
+          <h1 class="title">PfSense(E6)</h1>
         </div>
-        <button id="myBtn3">En savoir plus</button>
+        <button id="myBtn10">En savoir plus</button>
       </div>
-      
+
       <!-- Projet 4 -->
       <div class="card">
         <img src="img/project_reseau.png" alt="Logo du projet 4">
@@ -59,14 +50,32 @@
         </div>
         <button id="myBtn4">En savoir plus</button>
       </div>
-      
-      <!-- Projet 5 -->
+
+      <!-- Projet 3 -->
       <div class="card">
-        <img src="img/project5.png" alt="Logo du projet 5">
+        <img src="img/BDD.png" alt="Logo du projet 3">
         <div class="TITRE">
-          <h1 class="title">Projet 5</h1>
+          <h1 class="title">Base de Données</h1>
         </div>
-        <button id="myBtn5">En savoir plus</button>
+        <button id="myBtn3">En savoir plus</button>
+      </div>
+
+      <!-- Projet 1 -->
+      <div class="card">
+        <img src="img/neptune.png" alt="cite de l'Hôtel Neptune">
+        <div class="TITRE">
+          <h1 class="title">Site Web de l'Hôtel Neptune</h1>
+        </div>
+        <button id="myBtn1">En savoir plus</button>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="card"> 
+        <img src="img/travely.png" alt="Site de Travelly">
+        <div class="TITRE">
+          <h1 class="title">Travelly</h1>
+        </div>
+        <button id="myBtn2">En savoir plus</button>
       </div>
     </div>
 
@@ -131,7 +140,7 @@
       </ul>
       <p>Expérience enrichissante en <strong>cybersécurité</strong> et administration réseau.</p>
       <div class="project-report-download">
-        <a href="doc/FortiGate.pdf" download="Rapport_conf_FortiGate" class="download-link">
+        <a href="doc/Fiche-1-E6-MANOLIOS-Benjamin-SISR.pdf" download="Fiche-1-E6-MANOLIOS-Benjamin-SISR" class="download-link">
           <button type="button" class="download-button">Télécharger le Rapport</button>
         </a>
       </div>
@@ -230,6 +239,51 @@
     </div>
   </div>
 
+  <!-- Modal pour le projet "OpenVPN" -->
+  <div id="myModal5" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal5">&times;</span>
+      <h1>Résumé : Mise en place d’un VPN sécurisé avec OpenVPN</h1>
+      <p>Dans le cadre de mon alternance à la Maison des Ligues de Lorraine (M2L), j’ai mis en œuvre une solution VPN à l’aide d’OpenVPN afin de permettre aux utilisateurs de se connecter à distance au réseau de l’organisation de manière chiffrée et sécurisée.</p>
+      
+      <h3>🎯 Objectifs :</h3>
+      <ul>
+        <li>Offrir un accès distant sécurisé au réseau interne pour les techniciens et responsables.</li>
+        <li>Garantir la confidentialité des échanges par chiffrement TLS/SSL.</li>
+        <li>Permettre une authentification forte grâce aux certificats personnalisés.</li>
+        <li>Enregistrer les connexions pour assurer une traçabilité complète.</li>
+      </ul>
+
+      <h3>🔧 Solution technique :</h3>
+      <ul>
+        <li>Déploiement d’un serveur OpenVPN dans un environnement virtualisé avec Proxmox VE.</li>
+        <li>Génération d’une infrastructure PKI avec Easy-RSA (CA, certificats serveur/client, DH, TLS-auth).</li>
+        <li>Création de fichiers .ovpn personnalisés pour chaque utilisateur.</li>
+        <li>Intégration avec le pare-feu pfSense pour le routage et la gestion réseau.</li>
+      </ul>
+
+      <h3>🚀 Impact :</h3>
+      <ul>
+        <li>Connexions sécurisées depuis l’extérieur, comme si l’utilisateur était sur site.</li>
+        <li>Compatible multi-plateformes : Windows, Linux, Android, etc.</li>
+        <li>Réduction des risques de piratage grâce au chiffrement et à l’authentification par certificats.</li>
+        <li>Solution libre, stable, évolutive et peu coûteuse.</li>
+      </ul>
+
+      <h3>⚠️ Points de vigilance :</h3>
+      <ul>
+        <li>La mise en place nécessite une bonne maîtrise réseau (routage, sécurité, certificats).</li>
+        <li>Maintenance régulière à prévoir (certificats, logs, supervision).</li>
+      </ul>
+
+      <div class="project-report-download">
+        <a href="doc/Épreuve E6 Situation°2.pdf" download="Rapport_OpenVPN" class="download-link">
+          <button type="button" class="download-button">Télécharger le Rapport</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal pour le projet "CoercedPotato" -->
   <div id="myModal7" class="modal">
     <div class="modal-content">
@@ -313,6 +367,52 @@
     </div>
   </div>
 
+  <!-- Modal pour le projet "PfSense" -->
+  <div id="myModal10" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal10">&times;</span>
+      <h1>Résumé : Sécurisation Réseau avec pfSense</h1>
+      <p>Lors de mon projet à la Maison des Ligues de Lorraine (M2L), j’ai mis en place un pare-feu open source pfSense pour structurer et sécuriser le réseau interne de l’organisation, tout en modernisant son infrastructure réseau à l’aide de la virtualisation via Proxmox VE.</p>
+      
+      <h3>🎯 Objectifs :</h3>
+      <ul>
+        <li>Déploiement de pfSense comme routeur et pare-feu principal.</li>
+        <li>Segmentation réseau via des VLANs (serveurs, postes clients, supervision…).</li>
+        <li>Mise en place de règles de filtrage réseau personnalisées.</li>
+        <li>Améliorer la gestion DHCP, le routage, et la protection des données internes.</li>
+      </ul>
+
+      <h3>🔧 Solution technique :</h3>
+      <ul>
+        <li>Installation de pfSense dans une VM hébergée sur Proxmox.</li>
+        <li>Création de VLANs :</li>
+        <ul>
+          <li>VLAN 10 : Serveurs</li>
+          <li>VLAN 30 : Postes clients</li>
+          <li>VLAN 20 : IT interne</li>
+          <li>VLAN 50 : VPN</li>
+          <li>VLAN 99 : Backup</li>
+        </ul>
+        <li>Configuration d’un DHCP interne, filtrage LAN↔DMZ, et accès restreint.</li>
+      </ul>
+
+      <h3>🚀 Impact :</h3>
+      <ul>
+        <li>Sécurité renforcée grâce à la séparation des flux et au filtrage.</li>
+        <li>Maîtrise du réseau via une interface centralisée et web.</li>
+        <li>Évolutivité : meilleure préparation à de futurs services.</li>
+        <li>Autonomie et compétences SISR développées (virtualisation, sécurité, routage, VLANs...).</li>
+      </ul>
+      <div class="project-report-download">
+        <a href="doc/Épreuve E6 Situation°1.pdf" download="Rapport_script_python" class="download-link">
+          <button type="button" class="download-button">Épreuve E6 Situation°1</button>
+        </a>
+      </div>
+    </div>
+
+ 
+  </div>
+
   <div id="footer-container"></div>
 
   <script>
@@ -358,10 +458,13 @@
     var modal2 = document.getElementById("myModal2");
     var modal3 = document.getElementById("myModal3");
     var modal4 = document.getElementById("myModal4");
+    var modal5 = document.getElementById("myModal5");
     var modal6 = document.getElementById("myModal6");
     var modal7 = document.getElementById("myModal7");
     var modal8 = document.getElementById("myModal8");
     var modal9 = document.getElementById("myModal9");
+    var modal10 = document.getElementById("myModal10"); 
+  
     
 
     // Boutons pour ouvrir les modals
@@ -369,10 +472,13 @@
     var btn2 = document.getElementById("myBtn2");
     var btn3 = document.getElementById("myBtn3");
     var btn4 = document.getElementById("myBtn4");
+    var btn5 = document.getElementById("myBtn5");
     var btn6 = document.getElementById("myBtn6");
     var btn7 = document.getElementById("myBtn7");
     var btn8 = document.getElementById("myBtn8");
     var btn9 = document.getElementById("myBtn9");
+    var btn10 = document.getElementById("myBtn10");
+
   
 
     // Boutons pour fermer les modals
@@ -380,10 +486,12 @@
     var span2 = document.getElementById("closeModal2");
     var span3 = document.getElementById("closeModal3");
     var span4 = document.getElementById("closeModal4");
+    var span5 = document.getElementById("closeModal5");
     var span6 = document.getElementById("closeModal6");
     var span7 = document.getElementById("closeModal7");
     var span8 = document.getElementById("closeModal8");
     var span9 = document.getElementById("closeModal9");
+    var span10 = document.getElementById("closeModal10");
 
 
     // Ouvrir les modals
@@ -399,6 +507,9 @@
     btn4.onclick = function() {
       modal4.style.display = "block";
     }
+    btn5.onclick = function() {
+      modal5.style.display = "block";
+    }
     btn6.onclick = function() {
       modal6.style.display = "block";
     }
@@ -410,6 +521,9 @@
     } 
     btn9.onclick = function() {
       modal9.style.display = "block";
+    }
+    btn10.onclick = function() {
+      modal10.style.display = "block";
     }
 
     // Fermer les modals
@@ -425,6 +539,9 @@
     span4.onclick = function() {
       modal4.style.display = "none";
     }
+    span5.onclick = function() {
+      modal5.style.display = "none";
+    }
     span6.onclick = function() {
       modal6.style.display = "none";
     }
@@ -437,6 +554,9 @@
     span9.onclick = function() {
       modal9.style.display = "none";
     }
+    span10.onclick = function() {
+      modal10.style.display = "none";
+    }
 
     // Fermer les modals si l'utilisateur clique à l'extérieur d'eux
     window.onclick = function(event) {
@@ -448,6 +568,8 @@
         modal3.style.display = "none";
       } else if (event.target == modal4) {
         modal4.style.display = "none";
+      } else if (event.target == modal5) {
+        modal5.style.display = "none";
       } else if (event.target == modal6) {
         modal6.style.display = "none";
       } else if (event.target == modal7) {
@@ -457,6 +579,9 @@
       }
       else if (event.target == modal9) {
         modal9.style.display = "none";
+      }
+      else if (event.target == modal10) {
+        modal10.style.display = "none";
       }
     }
   </script>
