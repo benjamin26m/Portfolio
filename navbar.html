@@ -9,10 +9,30 @@
       <a href="https://www.linkedin.com/in/benjamin-manolios-41a7b7262/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </div>
-  <a href="index.html"><i class="fas fa-home"></i><span> Accueil</span></a>
-  <a href="BTS.html" class="active"><i class="fas fa-graduation-cap"></i><span> BTS SIO</span></a>
+  
+  <div class="dropdown">
+    <a href="index.html"><i class="fas fa-home"></i><span> Accueil</span></a>
+    <div class="dropdown-content">
+      <a href="index.html#presentation">Présentation</a>
+      <a href="index.html#certification">Formations et certifications</a>
+      <a href="index.html#parcours">Parcours</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="BTS.html"><i class="fas fa-graduation-cap"></i><span> BTS SIO</span></a>
+    <div class="dropdown-content">
+      <a href="sisr-details.html">Option SISR</a>
+      <a href="slam-details.html">Option SLAM</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="Epreuve.html"><i class="fas fa-file-alt"></i><span> Epreuve</span></a>
+    <div class="dropdown-content">
+      <a href="Epreuve.html#epreuve-e5">Epreuve E5</a>
+      <a href="Epreuve.html#epreuve-e6.">Epreuve E6</a>
+    </div>
+  </div>
   <a href="projects.html"><i class="fas fa-code"></i><span> Projets</span></a>
-  <a href="Epreuve.html"><i class="fas fa-file-alt"></i><span> Epreuve</span></a>
   <a href="TableauSynthese.html"><i class="fas fa-table"></i><span> Tableaux de Synthèse</span></a>
   <a href="veille-techno.html"><i class="fas fa-folder-open"></i><span> Veille Techno</span></a>
 </nav>
@@ -238,6 +258,41 @@
   /* Quand la navbar est agrandie, on ajuste le padding */
   nav#sidebar:hover ~ .main-content {
     padding-left: 300px; /* Ajuste en fonction de la largeur de la navbar */
+  }
+
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* Show the dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Hover effect for dropdown links */
+  .dropdown-content a:hover {
+    background-color: #575757;
   }
 </style>
 

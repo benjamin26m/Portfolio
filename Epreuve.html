@@ -7,6 +7,46 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/bm_favicon.ico">
   <title>Documents pour les Épreuves - Portfolio</title>
+  <style>
+    /* Add spacing and background for each section */
+    .epreuve-section {
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Specific background colors for each section */
+    .epreuve-section.e5 {
+      background: #f0f8ff; /* Light blue for Épreuve E5 */
+    }
+
+    .epreuve-section.e6 {
+      background: #fffaf0; /* Light yellow for Épreuve E6 */
+    }
+
+    /* Separator line between sections */
+    .separator {
+      border-top: 3px dashed #aaa;
+      margin: 50px 0;
+      width: 100%;
+    }
+
+    /* Section titles with icons */
+    .epreuve-section h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .epreuve-section h2 i {
+      font-size: 1.5rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,14 +70,9 @@
   <!-- Section Documents déplacée ici -->
   <section class="documents-section">
     <div class="container">
-      <div class="documents-title">
-        <h2>Documents 📄</h2>
-        <p><i>Les documents officiels et supports pour les épreuves du BTS SIO.</i></p>
-      </div>
-
-      <!-- Table for Épreuve E5 -->
-      <div class="documents-category">
-        <h3>Épreuve E5</h3>
+      <!-- Épreuve E5 Section -->
+      <div class="epreuve-section e5" id="epreuve-e5">
+        <h2><i class="fas fa-file-alt"></i> Épreuve E5</h2>
         <table class="documents-table">
           <thead>
             <tr>
@@ -111,9 +146,12 @@
         </table>
       </div>
 
-      <!-- Table for Épreuve E6 -->
-      <div class="documents-category">
-        <h3>Épreuve E6</h3>
+      <!-- Separator -->
+      <div class="separator"></div>
+
+      <!-- Épreuve E6 Section -->
+      <div class="epreuve-section e6" id="epreuve-e6">
+        <h2><i class="fas fa-tasks"></i> Épreuve E6</h2>
         <table class="documents-table">
           <thead>
             <tr>
