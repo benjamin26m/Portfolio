@@ -87,10 +87,11 @@ body {
   padding: 20px;
   width: 350px;
   text-align: center;
-  height: 300px; /* Add fixed height */
+  height: 300px; /* Set a fixed height for uniformity */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensure even spacing */
+  align-items: center; /* Center content horizontally */
 }
 
 .certification-card:hover {
@@ -466,7 +467,7 @@ body > :first-child {
 /* Bubble styles for parcours scolaire section */
 .resume-item {
   margin-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 20px; /* Ensure consistent padding */
   border-left: 3px solid #971f1f;
   position: relative;
 }
@@ -495,11 +496,12 @@ body > :first-child {
 .resume-item h5 {
   font-size: 16px;
   background: #acb0b4;
-  padding: 5px 15px;
-  display: inline-block;
+  padding: 5px 10px;
+  display: inline-block; /* Limit background width */
+  text-align: center; /* Center text */
+  margin: 0 auto; /* Center the element */
   font-weight: 600;
   border-radius: 5px;
-  border: 1px solid #999;
 }
 
 .resume-item p {
