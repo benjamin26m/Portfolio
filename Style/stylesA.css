@@ -104,7 +104,7 @@ body {
   display: block;
 }
 .certification {
-  margin-bottom: 80px; /* Add space below the Certification section */
+  margin-bottom: 0; /* Remove space below the Certification section */
   height: 100vh;
 }
 
@@ -633,5 +633,96 @@ body > :first-child {
 
 .download-button:hover {
   background-color: #2563eb;
+}
+
+/* Styles pour la section Compétences maîtrisées */
+.competences-section {
+  padding: 40px 0;
+  background: linear-gradient(to right, #957DAD, #5E8C9A); /* Match hero-section gradient */
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+.competences-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff; /* White text to match the page */
+}
+
+.competences-title-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px; /* Add spacing above the title */
+}
+
+.competences-title {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+  margin-top: 10px !important;
+  text-align: center; /* Ensure the title is centered */
+}
+
+.competences-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0055a5;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.competences-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.competences-logos img {
+  height: 60px;
+  max-width: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* New styles for captions under logos */
+.competence-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.competence-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ffffff; /* Match the text color with the section */
+}
+
+.certifications-and-competences {
+  margin-top: 40px;
+}
+
+.competence-item img {
+  width: 80px; /* Increase the width */
+  height: 80px; /* Increase the height */
+  margin-bottom: 10px; /* Adjust spacing below the logo */
+}
+
+@media (max-width: 600px) {
+  .competences-logos img {
+    height: 40px;
+  }
 }
 
