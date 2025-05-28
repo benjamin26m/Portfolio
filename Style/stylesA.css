@@ -696,6 +696,13 @@ body > :first-child {
   border-radius: 8px;
 }
 
+.competences-logos img:empty {
+  content: "Image non disponible";
+  display: block;
+  text-align: center;
+  color: red;
+}
+
 /* New styles for captions under logos */
 .competence-item {
   display: flex;
