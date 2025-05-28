@@ -94,9 +94,6 @@ text-align: center;
   padding: 12px 24px; /* Légèrement plus grand pour l’esthétique */
 }
 
-
-
-
 /* Styles du modal */
 .modal {
 display: none;
@@ -209,6 +206,39 @@ button[id^="myBtn"]:hover::before {
   opacity: 0.5;
 }
 
+/* Section de tri */
+.sorting-section {
+  margin-bottom: 20px;
+}
+
+.sort-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.sort-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour le menu déroulant */
+.filter-dropdown {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+}
 
 /* Médias queries pour la réactivité */
 @media (max-width: 768px) {
