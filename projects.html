@@ -92,8 +92,19 @@
 
     <!-- Section "En entreprise" -->
     <div class="section business">
-      <h2>En Stages</h2>
-      
+      <h2 id="stages-title" style="cursor:pointer;">En Stages</h2>
+      <div id="rapports-stage-list" style="display:none; margin: 30px 0 30px 0; text-align: center;">
+        <div class="rapport-item" id="rapport2024">
+          <strong>Rapport de Stage 2024</strong> — Rapport détaillé de mon stage effectué en 2024.
+          <a href="doc/rapport_stage_2024.pdf" target="_blank" style="margin-left:10px;">Consulter</a>
+          <a href="doc/rapport_stage_2024.pdf" download style="margin-left:10px;">Télécharger</a>
+        </div>
+        <div class="rapport-item" id="rapport2025" style="margin-top:10px;">
+          <strong>Rapport de Stage 2025</strong> — Rapport détaillé de mon stage effectué en 2025.
+          <a href="doc/rapport_stage_2025.pdf" target="_blank" style="margin-left:10px;">Consulter</a>
+          <a href="doc/rapport_stage_2025.pdf" download style="margin-left:10px;">Télécharger</a>
+        </div>
+      </div>
       <!-- Projet 1 -->
       <div class="card" data-category="pare-feu vpn">
         <img src="img/shema.png" alt="Logo de l'entreprise 1">
@@ -540,6 +551,15 @@
 
   <div id="footer-container"></div>
 
+  <style>
+    /* Ajoute la surbrillance */
+    .highlight {
+      background: #ffe066;
+      transition: background 0.4s;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #ffe066;
+    }
+  </style>
   <script>
     // Fonction pour charger un fichier HTML
     function loadHTML(id, file, callback) {
@@ -575,8 +595,29 @@
         }
       });
     });
-  </script>
-  <script>
+
+    // Affichage et surbrillance des rapports de stage (clic uniquement sur le titre "En Stages")
+    document.addEventListener('DOMContentLoaded', function() {
+    var list = document.getElementById('rapports-stage-list');
+    var rapportItems = document.querySelectorAll('.rapport-item');
+    var stagesTitle = document.getElementById('stages-title');
+    stagesTitle.addEventListener('click', function() {
+      if (list.style.display === "none") {
+        list.style.display = "block";
+        rapportItems.forEach(function(item) {
+          item.classList.add('highlight');
+        });
+        setTimeout(function() {
+          rapportItems.forEach(function(item) {
+            item.classList.remove('highlight');
+          });
+        }, 1200);
+      } else {
+        list.style.display = "none";
+      }
+    });
+  });
+
     // Modals
     var modal1 = document.getElementById("myModal1");
     var modal2 = document.getElementById("myModal2");

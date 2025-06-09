@@ -240,6 +240,49 @@ button[id^="myBtn"]:hover::before {
   border-color: #007bff;
 }
 
+/* Ajoute un effet visuel pour montrer que les rapports sont cliquables */
+.rapport-item {
+  cursor: pointer;
+  background: #f7f7fa;
+  border-radius: 8px;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(80,80,80,0.06);
+}
+
+.rapport-item:hover {
+  background: #e0e7ff;
+  box-shadow: 0 2px 8px rgba(80,80,200,0.10);
+}
+
+.rapport-item a {
+  color: #0056b3;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.rapport-item a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/* Rendre le titre "En Stages" visuellement cliquable */
+#stages-title {
+  cursor: pointer;
+  color: #0056b3;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+#stages-title:hover,
+#stages-title:focus {
+  color: #003366;
+  text-shadow: 0 2px 8px #b3c6ff;
+  outline: none;
+}
+
 /* Médias queries pour la réactivité */
 @media (max-width: 768px) {
 .container, .projects-container {
